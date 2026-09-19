@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form actio="register.php" method="post">
+        <div>
+            <label for="username">Логін:</label>
+            <input type="text" id="username" name="username"
+             placeholder="Введіть логін" required>
+        </div>
+        <div>
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email"
+            placeholder="example@gmail.com" required>
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password"
+            minlength="6" required>
+        </div>
+        <input type="submit" value="Зареєструватися">
+    </form>
+</body>
+</html>
