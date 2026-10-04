@@ -1,0 +1,13 @@
+:root{
+    --primary-color: #ffffff;
+    --main-font: 'Inter' ,sans-serif;
+    --back-color: #000000;
+    --from-gradient: #C91937;
+    --to-gradient: #FECE84;
+}
+
+body{
+    font-family: var(--main-font);
+    background-color: var(--primary-colors);
+    color: var(--back-color);
+}
