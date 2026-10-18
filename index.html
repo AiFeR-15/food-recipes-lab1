@@ -8,35 +8,41 @@
     <link rel="stylesheet" href="style/themes.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CookBooks</title>
 </head>
 <body class="body">
-    <header>
-        <h1>Cookbook</h1>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">CookBooks</a>
+            <nav class="main-nav">
+                <a href="index.html" class="main-nav__link">Home</a>
+                <a href="recipes.html" class="main-nav__link">Recipes</a>
+                <a href="about.html" class="main-nav__link">About us</a>
+            </nav>
+                <a href="profile.html" class="header__profile" aria-label="Profile">
+                    <img src="media/profile-icon.png" alt="Profile Icon" class="header__profile-img">
+                </a>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Home</a> | <a href="recipes.html">Recipes</a>
-         | <a href="about.html">About us</a>
-         <a> </a>
-    </nav>
-    <section>
-        <article> 
-            <h2 class="text-gradient">Happy to serve!</h2>
-            <p>Where food becomes art, and the kitchen becomes home!</p>
-            <img src="media/Mask group.png" width="300px" height="550px">
 
-            
-            <a href="register.html">
-                <button>Register </button>
-            </a> 
+    <section class="hero">
+        <div class="container hero__container">
 
+            <div class="hero__content">
+                <h2 class="text-gradient">Happy to serve!</h2>
+                <p class="hero__subtitle">Where food becomes art, and the kitchen becomes home!</p>
 
-            <a href="explore.html">
-                <button>Explore</button>
-            </a>
+                <div class="hero__actions">
+                    <a href="register.html" class="button button--primary">Register</a>
+                    <a href="recipes.html" class="button button--secondary">Explore</a>
+                </div>
+            </div>
 
-        </article>
+            <div class="hero__media">
+                <img class="hero__image" src="media/pizza.png" alt="Delicious Pizza">
+            </div>
+        </div>
     </section>
-    
 </body>
 </html>

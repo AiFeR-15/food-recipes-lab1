@@ -1,0 +1,107 @@
+/* ПОЛЕ ПОШУКУ */
+.hero-banner__search {
+    background-image: url('../media/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    padding-left: 40px;
+    /* іконка маж 512 зменшуб до 16*/
+    background-size: 16px;
+
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header__profile-img {
+    width: 28px;                     /* Фіксована ширина іконки */
+    height: 28px;                    /* Фіксована висота */
+    object-fit: contain;             /* Зберігає пропорції, щоб картинка не сплющувалася */
+    transition: transform 0.2s ease;  /* Плавність для анімації */
+}
+
+.header__profile:hover {
+    transform: scale(1.1); /* Злегка збільшується при наведенні */
+}
+
+/* ЛОГОТИП ШАПКИ */
+.header__logo{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--back-color);
+}
+
+/* ПОСИЛАНННЯ МЕНЮ */
+.main-nav__link{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--back-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Стан при наведенні курсору мишки */
+.main-nav__link:hover{
+    color: var(--from-gradient);
+}
+
+/* ТЕКСТ ТА КАРТИНКА БАНЕРА */
+.hero__subtitle{
+    font-size: 18px;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.hero__image{
+    max-width: 100%;
+    /* 100%; 100% — картинка ніколи не вилізне за межі свого
+     батьківського блоку .hero__media */
+    height: auto;
+    border-radius: 25px 0;
+}
+
+/* КНОПКИ */
+.button{
+    display: inline-block;
+    /* робить тег <a> рядково-блоковим */
+    padding: 12px 30px;
+    /* 12px — зверху і знизу.
+    30px — зліва і справа. */
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer; 
+    /* cursor — вигляд курсору мишки при наведенні.
+    pointer — змінює звичайну стрілочку на "палець/ручку" */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover{
+    transform: translateY(-2px);
+}
+
+.button--primary{
+    background-color: var(--from-gradient);
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(195, 20, 50, 0.3);
+    /* box-shadow — тінь під кнопкою.
+       0 — зсув тіні по горизонталі X (тінь рівно по центру).
+       4px — зсув тіні по вертикалі Y (тінь падає на 4px донизу).
+       12px — радіус розмиття (чим більше значення, тим м'якша і розмитіша тінь).
+       rgba(195, 20, 50, 0.3) — колір тіні в форматі RGBA, де 0.3 — це 30% прозорості. */
+}
+
+.button--secondary {
+    background-color: var(--to-gradient);
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(254, 206, 132, 0.4);
+    /* box-shadow — м'яка помаранчева тінь під кнопкою з 40% прозорості. */
+}
