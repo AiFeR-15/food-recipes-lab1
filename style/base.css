@@ -11,3 +11,27 @@ body{
     background-color: var(--primary-colors);
     color: var(--back-color);
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.hero-banner__search {
+    background-image: url('../media/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    padding-left: 40px;
+    /* іконка маж 512 зменшуб до 16*/
+    background-size: 16px;
+
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
