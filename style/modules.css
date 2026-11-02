@@ -45,6 +45,11 @@
     transition: color 0.2s ease;
 }
 
+.main-nav__link--active{
+    color: var(--to-gradient);
+    font-weight: 600;
+}
+
 /* Стан при наведенні курсору мишки */
 .main-nav__link:hover{
     color: var(--from-gradient);
