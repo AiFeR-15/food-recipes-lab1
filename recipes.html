@@ -11,14 +11,20 @@
     <title>Document</title>
 </head>
 <body class="body">
-    <header>
-        <h1>Cookbook</h1>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">CookBooks</a>
+            <nav class="main-nav">
+                <a href="index.html" class="main-nav__link">Home</a>
+                <a href="recipes.html" class="main-nav__link main-nav__link--active">Recipes</a>
+                <a href="about.html" class="main-nav__link">About us</a>
+            </nav>
+                <a href="profile.html" class="header__profile" aria-label="Profile">
+                    <img src="media/profile-icon.png" alt="Profile Icon" class="header__profile-img">
+                </a>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Home</a> | <a href="recipes.html">Recipes</a>
-         | <a href="about.html">About us</a>
-         <a> </a>
-    </nav>
 
     <section class="hero-banner">
         <div class="hero-banner__content">
