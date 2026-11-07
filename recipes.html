@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style/themes.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CookBooks</title>
 </head>
-<body class="body">
+<body class="body" id="top">
 
     <header class="header">
         <div class="container header__container">
@@ -18,58 +18,77 @@
             <nav class="main-nav">
                 <a href="index.html" class="main-nav__link">Home</a>
                 <a href="recipes.html" class="main-nav__link main-nav__link--active">Recipes</a>
-                <a href="about.html" class="main-nav__link">About us</a>
+                
+                <!-- Повертаємо випадаюче меню для About us -->
+                <div class="dropdown">
+                    <a href="about.html" class="main-nav__link">About us 
+                        <span class="dropdown__arrow">
+                            <img src="media/arrow-down.png" alt="Відкрити меню">
+                        </span>
+                    </a>
+                    <div class="dropdown__menu">
+                        <a href="#contact" class="dropdown__item">Як зв'язатися</a>
+                        <a href="#complaints" class="dropdown__item">Скарги</a>
+                        <a href="#memes" class="dropdown__item">Мемі</a>
+                        <a href="#info" class="dropdown__item">Звідки я</a>
+                    </div>
+                </div>
             </nav>
-                <a href="profile.html" class="header__profile" aria-label="Profile">
-                    <img src="media/profile-icon.png" alt="Profile Icon" class="header__profile-img">
-                </a>
+            <a href="profile.html" class="header__profile" aria-label="Profile">
+                <img src="media/profile-icon.png" alt="Profile Icon" class="header__profile-img">
+            </a>
         </div>
     </header>
 
-    <section class="hero-banner">
-        <div class="hero-banner__content">
-            <h2>Unleash your inner chef</h2>
-            <p>Discover a world of culinary delights as you explore a treasure trove of diverse recipes.</p>
-            <!-- Поле пошуку -->
-            <label for="search" class="visually-hidden">Пошук:</label>
-            <input type="search" id="search-input" class="hero-banner__search" placeholder="search recipes">
+    <section class="hero-banner container">
+        <!-- Додаємо контейнер, щоб текст не прилипав до лівого краю монітора -->
+
+            <div class="hero-banner__content">
+                <h2>Unleash your inner chef</h2>
+                <p>Discover a world of culinary delights as you explore a treasure trove of diverse recipes.</p>
+                <label for="search" class="visually-hidden">Пошук:</label>
+                <input type="search" id="search-input" class="hero-banner__search" placeholder="search recipes">
+            </div>
+
+    </section>
+
+    <!-- Секція для сітки -->
+    <section class="recipes-section">
+        <!-- Додаємо контейнер, щоб сітка стояла рівно по центру екрана -->
+        <div class="container">
+            <!-- Сама Grid-сітка -->
+            <div class="recipes-grid">
+
+                <article class="recipe-card">
+                    <img class="recipe-card__image" src="media/waffle.jpg" alt="BlueBerry Waffle">
+                    <div class="recipe-card__info">
+                        <h3 class="recipe-card__title">BlueBerry Waffle</h3>
+                        <span class="recipe-card__time">⏱ 15-20 min</span>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <img class="recipe-card__image" src="media/egg.jpg" alt="Egg Pouch">
+                    <div class="recipe-card__info">
+                        <h3 class="recipe-card__title">Egg Pouch</h3>
+                        <span class="recipe-card__time">⏱ 5-10 min</span>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <img class="recipe-card__image" src="media/nachos.jpg" alt="Nachos With Mayo">
+                    <div class="recipe-card__info">
+                        <h3 class="recipe-card__title">Nachos With Mayo</h3>
+                        <span class="recipe-card__time">⏱ 25-30 min</span>
+                    </div>
+                </article>
+
+                <!-- Можеш додати 4-ту картку, щоб заповнити весь перший ряд сітки -->
+
+            </div>
         </div>
     </section>
 
-    <section class="recipes-grid">
-
-        <article class="recipe-card">
-            <img class="recipe-card__image" src="media/waffle.jpg" alt="BlueBerry Waffle">
-            
-            <!-- Нижній блок картки (який потім буде помаранчевим із закругленнями) -->
-            <div class="recipe-card__info">
-                <h3 class="recipe-card__title">BlueBerry Waffle</h3>
-                <!-- Іконка годинника та час -->
-                <span class="recipe-card__time">⏱ 15-20 min</span>
-            </div>
-        </article>
-
-        <!-- Картка 2 -->
-        <article class="recipe-card">
-            <img class="recipe-card__image" src="media/egg.jpg" alt="Egg Pouch">
-            
-            <div class="recipe-card__info">
-                <h3 class="recipe-card__title">Egg Pouch</h3>
-                <span class="recipe-card__time">⏱ 5-10 min</span>
-            </div>
-        </article>
-
-        <!-- Картка 3 -->
-        <article class="recipe-card">
-            <img class="recipe-card__image" src="media/nachos.jpg" alt="Nachos With Mayo">
-            
-            <div class="recipe-card__info">
-                <h3 class="recipe-card__title">Nachos With Mayo</h3>
-                <span class="recipe-card__time">⏱ 25-30 min</span>
-            </div>
-        </article>
-
-        <!-- Тут можна додавати інші картки за таким самим шаблоном -->
-    </section>
+    <a href="#top" class="back-to-top">↑</a>
 </body>
 </html>

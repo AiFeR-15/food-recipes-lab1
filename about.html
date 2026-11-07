@@ -18,7 +18,24 @@
             <nav class="main-nav">
                 <a href="index.html" class="main-nav__link">Home</a>
                 <a href="recipes.html" class="main-nav__link">Recipes</a>
-                <a href="about.html" class="main-nav__link main-nav__link--active">About us</a>
+                
+                <!-- Обгортка для випадаючого меню -->
+                <div class="dropdown">
+                    <!-- Додаємо стрілочку (span) до тексту -->
+                    <a href="about.html" class="main-nav__link main-nav__link--active">About us 
+                        <span class="dropdown__arrow">
+                            <img src="media/arrow-down.png" alt="Відкрити меню">
+                        </span>
+                    </a>
+                    
+                    <!-- Саме випадаюче вікно (спочатку сховане) -->
+                    <div class="dropdown__menu">
+                        <a href="#contact" class="dropdown__item">Як зв'язатися</a>
+                        <a href="#complaints" class="dropdown__item">Скарги</a>
+                        <a href="#memes" class="dropdown__item">Мемі</a>
+                        <a href="#info" class="dropdown__item">Звідки я</a>
+                    </div>
+                </div>
             </nav>
                 <a href="profile.html" class="header__profile" aria-label="Profile">
                     <img src="media/profile-icon.png" alt="Profile Icon" class="header__profile-img">
