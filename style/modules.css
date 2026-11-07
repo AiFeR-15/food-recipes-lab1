@@ -301,29 +301,71 @@
 }
 
 /* Оформлення головного банера */
+
 .hero-banner {
-    /* ЗАМІНИ назву файлу на ту, що в тебе завантажена для банера */
+    margin-top: 40px;
+    border-radius: 0;                 /* Гострі кути банера */
     background-image: url('../media/banner-bg.png'); 
-    background-size: cover;          /* Картинка заповнює весь блок, не сплющуючись */
-    background-position: center;     /* Центруємо картинку */
-    padding: 80px 0;                 /* Великі відступи зверху і знизу, щоб банер був широким */
-    margin-bottom: 50px;             /* Відступ до карток */
-    border-radius: 20px;             /* Якщо на макеті кути банера закруглені */
+    background-size: cover;          
+    background-position: center;     
+    padding: 80px 0;               /* Відступи всередині, щоб контент не прилипав padding: 80px 0;  */
+    margin-bottom: 50px;             
 }
 
-/* Блок із текстом всередині банера */
 .hero-banner__content {
-    max-width: 50%;                  /* Текст займає лише ліву половину, як на макеті */
-    /*background: rgba(255, 255, 255, 0.8);  Напівпрозорий білий фон, щоб текст було легко читати поверх фото */
-    padding: 30px;
-    border-radius: 15px;
+    padding-left: 40px;
+    max-width: 500px;                 /* Нормальна ширина для тексту */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;          /* Рівне вирівнювання по лівому краю */
+}
+
+/* Заголовок банера */
+.hero-banner__content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.hero-banner__content p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 /* Поле пошуку */
 .hero-banner__search {
+    /* 1. Налаштування фону та білої іконки лупи */
+    background-color: rgba(0, 0, 0, 0.44);
+    background-image: url('../media/search-icon.png'); /* Уберися, що іконка біла! */
+    background-repeat: no-repeat;
+    background-position: 14px center;                  /* Зсув лупи від лівого краю */
+    background-size: 16px;
+    
+    /* 2. Розміри та відступи (обов'язковий великий відступ зліва, щоб текст не налізав на лупу) */
     width: 100%;
-    padding: 12px 20px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    margin-top: 15px;
+    max-width: 280px;
+    padding: 12px 20px 12px 42px; 
+    margin-top: 20px;
+    
+    /* 3. Рамки та гострі кути */
+    border: none;
+    border-radius: 0;                 /* ПОВНІСТЮ ГОСТРІ КУТИ */
+    outline: none;
+    
+    /* 4. Шрифти та колір тексту */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+/* Текст-підказка "search recipes" усередині */
+.hero-banner__search::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.15em;           /* Гарні широкі пробіли між літерами */
+    color: rgba(255, 255, 255, 0.5);  /* Напівпрозорий білий */
 }
