@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/modules.css">
+    <link rel="stylesheet" href="style/states.css">
+    <link rel="stylesheet" href="style/themes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookBooks</title>
+</head>
+<body class="body" id="top">
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">CookBooks</a>
+            <nav class="main-nav">
+                <a href="index.html" class="main-nav__link">Home</a>
+                <a href="recipes.html" class="main-nav__link">Recipes</a>
+                
+            
+                <div class="dropdown">
+        
+                    <a href="about.html" class="main-nav__link  main-nav__link--active">About us 
+                        <span class="dropdown__arrow">
+                            <img src="media/arrow-down.png" alt="Відкрити меню">
+                        </span>
+                    </a>
+                    
+            
+                    <div class="dropdown__menu">
+                        <a href="#contact" class="dropdown__item">Як зв'язатися</a>
+                        <a href="#complaints" class="dropdown__item">Скарги</a>
+                        <a href="memes.html" class="dropdown__item">Мемі</a>
+                        <a href="#info" class="dropdown__item">Звідки я</a>
+                    </div>
+                </div>
+            </nav>
+                <a href="profile.html" class="header__profile" aria-label="Profile">
+                    <img src="media/profile-icon.png" alt="Profile Icon" class="header__profile-img">
+                </a>
+        </div>
+
+        <!-- Секція для мемів -->
+    <section class="memes-section container">
+        <div class="memes-grid">
+            
+            <!-- Картка №1 -->
+            <article class="meme-card">
+                <!-- Зображення, яке спочатку буде сховане -->
+                <img src="media/mem1.png" alt="Meme 1" class="meme-card__image">
+                
+                <!-- Блок із текстом, який висить поверх картинки -->
+                <div class="meme-card__overlay">
+                    <h3 class="meme-card__title">HOME DECORATION</h3>
+                </div>
+            </article>
+
+            <!-- Картка №2 -->
+            <article class="meme-card">
+                <img src="media/meme2.jpg" alt="Meme 2" class="meme-card__image">
+                <div class="meme-card__overlay">
+                    <h3 class="meme-card__title">PROGRAMMING JOKE</h3>
+                </div>
+            </article>
+
+            <!-- Картка №3 -->
+            <article class="meme-card">
+                <!-- Зображення, яке спочатку буде сховане -->
+                <img src="media/meme3.jpg" alt="Meme 3" class="meme-card__image">
+                
+                <!-- Блок із текстом, який висить поверх картинки -->
+                <div class="meme-card__overlay">
+                    <h3 class="meme-card__title">HOME DECORATION</h3>
+                </div>
+            </article>
+
+            <!-- Картка №4 -->
+            <article class="meme-card">
+                <img src="media/meme4.jpg" alt="Meme 4" class="meme-card__image">
+                <div class="meme-card__overlay">
+                    <h3 class="meme-card__title">PROGRAMMING JOKE</h3>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    </header>
+    <a href="#top" class="back-to-top">↑</a>
+</body>
+</html>
