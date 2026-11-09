@@ -6,6 +6,11 @@
     --to-gradient: #FECE84;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body{
     font-family: var(--main-font);
     background-color: var(--primary-color);
