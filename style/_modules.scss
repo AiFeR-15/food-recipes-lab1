@@ -1,0 +1,324 @@
+// ==========================================================================
+// HEADER: Логотип, меню та іконка профілю
+// ==========================================================================
+@use 'variables' as *;
+
+.header {
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-dark;
+    text-decoration: none;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform $transition-fast;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__profile-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+}
+
+.main-nav {
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-dark;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &--active {
+      color: $color-secondary;
+      font-weight: 600;
+    }
+  }
+}
+
+// ==========================================================================
+// DROPDOWN (Випадаюче меню About us)
+// ==========================================================================
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform $transition-fast;
+
+    img {
+      width: 12px;
+      height: auto;
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  &__item {
+    display: block;
+    padding: 10px 20px;
+    color: $color-dark;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  &:hover {
+    .dropdown__menu {
+      display: block;
+    }
+
+    .dropdown__arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// ==========================================================================
+// HERO & BUTTONS (Головна секція та кнопки)
+// ==========================================================================
+.hero {
+  &__subtitle {
+    font-size: 18px;
+    color: $color-text-muted;
+    margin-top: 15px;
+    line-height: 1.5;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: $radius-btn;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  color: $color-white !important;
+  text-decoration: none !important;
+
+  @include hover-lift(-2px);
+
+  &--primary {
+    background-color: $color-primary;
+    box-shadow: 0 4px 12px rgba(195, 20, 50, 0.3);
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    box-shadow: 0 4px 12px rgba(254, 206, 132, 0.4);
+  }
+}
+
+// ==========================================================================
+// HERO BANNER & SEARCH (Банер на сторінці рецептів)
+// ==========================================================================
+.hero-banner {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding: 80px 0;
+  border-radius: 0;
+  background-image: url('../media/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    padding-left: 40px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: $color-dark;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #333333;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px 12px 42px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.44);
+    background-image: url('../media/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    background-size: 16px;
+    color: $color-white;
+    font-family: $font-main;
+    font-size: 14px;
+
+    &::placeholder {
+      font-family: $font-main;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+// ==========================================================================
+// RECIPE CARD (Картка рецепту)
+// ==========================================================================
+.recipe-card {
+  background: linear-gradient(to bottom right, $color-primary, $color-secondary);
+  border-radius: 40px 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  @include hover-lift(-10px, 0 15px 25px rgba(0, 0, 0, 0.2));
+
+  &__image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    padding-top: 40px;
+  }
+
+  &__info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-dark;
+    margin: 0;
+  }
+
+  &__time {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-dark;
+  }
+}
+
+// ==========================================================================
+// MEME CARD (Картка мему)
+// ==========================================================================
+.meme-card {
+  position: relative;
+  height: 250px;
+  background-color: $color-meme-bg;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+
+    @include flex-center;
+  }
+
+  &__title {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    .meme-card__image {
+      opacity: 1;
+    }
+
+    .meme-card__overlay {
+      opacity: 0;
+    }
+  }
+}
+
+// ==========================================================================
+// BACK TO TOP (Кнопка "Вгору")
+// ==========================================================================
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform $transition-fast, background-color $transition-fast;
+  z-index: 100;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: $color-secondary;
+  }
+}

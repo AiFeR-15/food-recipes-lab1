@@ -1,0 +1,32 @@
+// Кольори проєкту
+$color-primary: #c31432;      // Червоно-бордовий (Register, акценти)
+$color-secondary: #fece84;    // Помаранчево-жовтий (Explore, активні пункти)
+$color-dark: #000000;
+$color-white: #ffffff;
+$color-text-muted: #555555;
+$color-meme-bg: #8ab4f8;
+
+// Шрифти та розміри
+$font-main: 'Inter', sans-serif;
+$radius-btn: 10px;
+$transition-fast: 0.2s ease;
+$transition-smooth: 0.3s ease;
+
+// Міксин для ідеального центрування через Flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Міксин для плавного підняття елемента при наведенні
+@mixin hover-lift($y: -5px, $shadow: null) {
+  transition: transform $transition-smooth, box-shadow $transition-smooth;
+
+  &:hover {
+    transform: translateY($y);
+    @if $shadow != null {
+      box-shadow: $shadow;
+    }
+  }
+}
