@@ -32,3 +32,7 @@ a{
     text-decoration: none;
     color: var(--back-color);
 }
+
+/* * {
+    border: 1px solid red !important;
+} */
